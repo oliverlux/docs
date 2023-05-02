@@ -1,0 +1,62 @@
+/* Anpassung Grundfarbe*/
+:root {
+    --md-primary-fg-color:        #CCCC00;
+    --md-accent-fg-color:			#8A9100;
+  }
+  
+							 
+/* Container für das einbinden von Youtube videos*/
+.container {
+    position: relative; 
+    padding-bottom: 56.25%; 
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.md-nav__source {
+    background-color: #CCCC00;;
+}
+  
+  .md-header__button.md-logo img{
+    width: 100%;
+    height:100%;
+    border:none;
+}
+
+  
+  .md-header__title .md-ellipsis {
+      background-color: #444444;
+      margin: 0;
+      padding: 0 10px 0 10px; 
+      font-weight: 800;
+      transform: rotate(-2deg);
+      color: #fff;
+  }
+  
+  .md-header__title .md-ellipsis::after {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      bottom: 0;
+      color: #CCCC00;
+      content: '.';
+      position: absolute;
+      margin-left: 7px;
+      transform: translate(-100%, 0);
+  }
+  
+  .md-footer__title .md-ellipsis::after {
+      bottom: 0;
+      color: #CCCC00;
+      content: '.';
+      position: absolute;
+      transform: translate(-100%, 0);
+  }
+  
