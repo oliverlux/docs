@@ -1,0 +1,55 @@
+site_name: Modulinhalte Informatik
+nav:
+    - Home: index.md
+    - Unterteil: 
+      - About: about.md
+      - About: about.md
+theme:
+  name: material
+  logo: img/logo.png
+  favicon: img/favicon-32x32.png  
+  language: de
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      #accent: lime
+      #primary: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      #accent: lime
+      #primary: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+  features:
+#    - navigation.tabs
+    - navigation.footer
+    - navigation.instant
+  extra:
+    generator: false
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+copyright: Copyright &copy; 2023 <a href='https://www.gbssg.ch'><span style='font-weight:1000'>gbs</span>sg.ch</a> <span class='green'>|</span> Entwickler/in digitales Business EFZ <span class='green'>
+repo_url: https://github.com/oliverlux/content
+
