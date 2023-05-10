@@ -1,0 +1,133 @@
+---
+title: "Netzwerktechnik"
+subtitle: "Aufgabensammlung"
+author: 
+titlepage: true
+date: "2023 v1.0.0 "
+header-includes: |
+        \usepackage{fontawesome5}
+header-includes: |
+        \usepackage{awesomebox}
+
+---
+
+# Virtualisierung
+
+
+## Aufgabenstellung
+
+\colorbox{darkgray}{\color{white}Aufgabe 1: Was bedeutet der Begriff der Virtualisierung | {\faUser} Einzelarbeit | {\faClock} 20' }
+
+Mit Virtualisierung sind Sie sicherlich bereits während Ihrer bisherigen Lehre in Berührung gekommen. Versuchen Sie den nachfolgenden Arbeitsauftrag zuerst alleine zu bearbeiten. Wenn Sie fertig sind, können Sie sich mit Ihrem Banknachbarn austauschen:
+
+1. Was bedeutet Virtualisierung grundsätzlich?
+2. Wie funktioniert Virtualisierung grob?
+3. Wo und wann macht Virtualisierung Sinn? 
+
+
+\begin{tikzpicture}
+
+\draw[step=0.5cm,gray,very thin] (-2,-2) grid (15,10);
+
+\end{tikzpicture}
+
+
+\pagebreak
+
+
+# Beispielformatierungen für Arbeitsblätter
+
+Mit dem TEX-Template gbssg.tex können die nachfolgenden Formatierungen erzeugt werden.
+
+## Grafik inkl. Label
+
+![Bild aus dem Internet](https://res.cloudinary.com/luggs/image/upload/w_1000,f_auto,q_auto/v1570429411/GBS/Gbs_3.jpg)
+
+## Vektor Grafik einbinden (als PDF)
+
+![SVG-Grafik](https://res.cloudinary.com/luggs/image/upload/w_1000,f_auto,q_auto/v1600938419/lux.education/logo/lux_logo_ohne_rand.pdf)
+
+## Box Types
+
+For a list of all available boxes and options visit the [`awesomebox` documentation](https://ctan.org/pkg/awesomebox).
+
+\notebox{fdsafdsa fdsa fjdsafdsa}
+
+\awesomebox[violet]{2pt}{\faRocket}{violet}{Lorem ipsum…}
+
+\awesomebox{0pt}{\faPen}{black}{Hier kommt die Aufgabenstellung mit Hinweisen
+
+und auch mehreren Zeilen...
+
+}
+
+\tipbox{Lorem ipsum…}
+
+
+## Fussnoten
+
+Als Inline-Formatierung^[Dies ist die Fußnote.]...
+
+Mittels Reference Link[^1] kann ...
+
+[^1]: An Stelle der Ziffer kann wieder ein Identifier gewählt werden. Soll eine lange Fußnote Absätze oder ähnliche Blockelemente enthalten, müssen diese vier Leerzeichen eingerückt werden:
+
+Verweis auf eine [^lange_fußnote].
+
+[^lange_fußnote]: 
+
+    Folgeabsätze müssen eingerückt sein, damit ihre
+    Zugehörigkeit zu Fußnote deutlich wird. Folgeabsätze müssen eingerückt sein, damit ihre
+    Zugehörigkeit zu Fußnote deutlich wird. Folgeabsätze müssen eingerückt sein, damit ihre
+    Zugehörigkeit zu Fußnote deutlich wird. Folgeabsätze müssen eingerückt sein, damit ihre
+    Zugehörigkeit zu Fußnote deutlich wird.
+
+
+## Syntax Highlighting
+
+
+Ein bisschen Java
+
+```java
+public class Example implements LoremIpsum {
+	public static void map(String[] sortedLeft, Long[] sortedRight, int splitIndex) {
+		if(sortedLeft == null || sortedRight == null) {
+			System.err.println("Lorem ipsum dolor sit amet");
+		}
+	} // Obscura atque coniuge, per de coniunx
+}
+```
+
+Und auch HTML
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is the title of the page.</title>
+  </head>
+  <body>
+    <a href="http://example.com">This is a link.</a>
+    <img src="./image.jpg" alt="This is an image.">
+  </body>
+</html>
+```
+
+Und SQL 
+
+```sql
+CREATE TYPE person_t AS (
+	firstName VARCHAR(50) NOT NULL,
+);
+
+CREATE Or REPLACE FUNCTION getFormattedName(person) RETURNS text AS
+	$$ SELECT 'P: ' || initcap($1.firstName); $$
+LANGUAGE SQL;
+```
+
+\pagebreak
+
+\colorbox{yellow}{\color{black}Das ist ein normaler und längerer Text vielleicht über mehrere Zeilen oder so}
+
+\pagebreak
+
