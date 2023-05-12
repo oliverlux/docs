@@ -5,7 +5,8 @@ author: Oliver Lux | Version 1.0.0
 titlepage: true
 titlepage-rule-height: 0
 titlepage-background: ../../vorlagen/background.pdf
-date: "2023-05-12"
+date: today
+date-format: "DD.MM.YYYY"
 format:
   pdf:
     toc: true
@@ -13,7 +14,6 @@ format:
     toc-title: Inhaltsverzeichnis
     colorlinks: true
     template: ../../vorlagen/gbs.latex
-license: "CC BY"
 #  html:
 #    toc: true
 #    toc-location: left
