@@ -1,16 +1,27 @@
 ---
 title: "Netzwerktechnik"
 subtitle: "Aufgabensammlung"
-author: 
+author: Oliver Lux | Version 1.0.0
 titlepage: true
-date: "2023 v1.0.0 "
-header-includes: |
-        \usepackage{fontawesome5}
-header-includes: |
-        \usepackage{awesomebox}
+titlepage-rule-height: 0
+titlepage-background: ../../vorlagen/background.pdf
+date: "2023-05-12"
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    toc-title: Inhaltsverzeichnis
+    colorlinks: true
+    template: ../../vorlagen/gbs.latex
+license: "CC BY"
+#  html:
+#    toc: true
+#    toc-location: left
+#    number-sections: true
+#    toc-title: Inhalt
 
 ---
-
+\newpage
 # Virtualisierung
 
 
@@ -33,6 +44,64 @@ Mit Virtualisierung sind Sie sicherlich bereits während Ihrer bisherigen Lehre 
 
 
 \pagebreak
+
+
+# Formatierungen
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+
+:::{.callout-note}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+:::{.callout-tip}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+:::{.callout-warning}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+:::{.callout-caution}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+:::{.callout-important}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+```{dot}
+//| label: fig-simple
+//| fig-cap: "This is a simple graphviz graph."
+graph G {
+  layout=neato
+  run -- intr;
+  intr -- runbl;
+  runbl -- run;
+  run -- kernel;
+  kernel -- zombie;
+  kernel -- sleep;
+  kernel -- runmem;
+  sleep -- swap;
+  swap -- runswap;
+  runswap -- new;
+  runswap -- runmem;
+  new -- runmem;
+  sleep -- runmem;
+}
+```
 
 
 # Beispielformatierungen für Arbeitsblätter
@@ -131,3 +200,4 @@ LANGUAGE SQL;
 
 \pagebreak
 
+\listoffigures

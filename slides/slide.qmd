@@ -1,0 +1,44 @@
+---
+title: "Habits"
+author: "Oliver Lux"
+format: 
+  revealjs:
+    logo: ../vorlagen/logo.png
+    theme: moon
+    footer: "Oliver"
+    slide-number: c/t
+    chalkboard: true
+---
+
+# In the morning
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Breakfast
+
+- Eat eggs
+- Drink coffee
+
+# In the evening
+
+## Dinner
+
+- Eat spaghetti
+- Drink wine
+
+## Going to sleep
+
+:::: {.columns}
+
+::: {.column width="40%"}
+contents...
+:::
+
+::: {.column width="60%"}
+contents...
+:::
+
+::::
