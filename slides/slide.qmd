@@ -1,16 +1,16 @@
 ---
-title: "Habits"
-author: "Oliver Lux"
-format: 
+title: LexConf 2022 Presentation
+author: LexCorp
+version: 1.0.0
+format:
   revealjs:
-    logo: ../vorlagen/logo.png
-    theme: moon
-    footer: "Oliver"
-    slide-number: c/t
+    slide-number: true
+    footer: "Short title | Marc Paterno"
+    title-slide-attributes: 
+      data-background-image: https://res.cloudinary.com/luggs/image/upload/v1622877578/GBS/gbs.jpg
+      data-background-size: cover
     chalkboard: true
 ---
-
-# In the morning
 
 ## Getting up
 

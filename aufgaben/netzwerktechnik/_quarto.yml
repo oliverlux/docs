@@ -1,0 +1,13 @@
+author: NoName | Version 0.0.0
+titlepage: true
+titlepage-rule-height: 0
+titlepage-background: ../../vorlagen/background.pdf
+date: today
+date-format: "DD.MM.YYYY"
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    toc-title: Inhaltsverzeichnis
+    colorlinks: true
+    template: ../../vorlagen/gbs.latex
