@@ -1,9 +1,9 @@
 site_name: Modulinhalte Informatik
 nav:
     - Home: index.md
-    - Unterteil: 
-      - About: about.md
-      - About: about.md
+    - Allgemeine Informationen: 
+      - Umgang mit KI-/LLM-Tools: umgang-ki.md
+
 theme:
   name: material
   logo: img/logo.png
@@ -50,6 +50,6 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-copyright: Copyright &copy; 2023 <a href='https://www.gbssg.ch'><span style='font-weight:1000'>gbs</span>sg.ch</a> <span class='green'>|</span> Entwickler/in digitales Business EFZ <span class='green'>
+copyright: Copyright &copy; 2023 <a href='https://www.gbssg.ch'><span style='font-weight:1000'>gbs</span>sg.ch</a> <span class='green'>|</span> Zusatzunterlagen Informatik <span class='green'>
 repo_url: https://github.com/oliverlux/content
 
