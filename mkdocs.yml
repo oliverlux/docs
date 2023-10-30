@@ -3,6 +3,7 @@ nav:
     - Home: index.md
     - Allgemeine Informationen: 
       - Umgang mit KI-/LLM-Tools: umgang-ki.md
+      - Umgang mit VMs: umgang-vm.md
 
 theme:
   name: material
