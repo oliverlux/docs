@@ -1,0 +1,16 @@
+---
+title: "Netzwerktechnik"
+subtitle: "Aufgabensammlung"
+
+#  html:
+#    toc: true
+#    toc-location: left
+#    number-sections: true
+#    toc-title: Inhalt
+
+---
+\newpage
+# Virtualisierung
+
+
+## Aufgabenstellung

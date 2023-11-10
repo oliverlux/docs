@@ -1,0 +1,45 @@
+---
+title: "Netzwerktechnik"
+subtitle: "Aufgabensammlung"
+
+#  html:
+#    toc: true
+#    toc-location: left
+#    number-sections: true
+#    toc-title: Inhalt
+
+---
+\newpage
+# Virtualisierung
+
+
+## Aufgabenstellung
+
+\colorbox{darkgray}{\color{white}Aufgabe 1: Was bedeutet der Begriff der Virtualisierung | {\faUser} Einzelarbeit | {\faClock} 20' }
+
+Mit Virtualisierung sind Sie sicherlich bereits während Ihrer bisherigen Lehre in Berührung gekommen. Versuchen Sie den nachfolgenden Arbeitsauftrag zuerst alleine zu bearbeiten. Wenn Sie fertig sind, können Sie sich mit Ihrem Banknachbarn austauschen:
+
+1. Was bedeutet Virtualisierung grundsätzlich?
+2. Wie funktioniert Virtualisierung grob?
+3. Wo und wann macht Virtualisierung Sinn? 
+
+
+\begin{tikzpicture}
+
+\draw[step=0.5cm,gray,very thin] (-2,-2) grid (15,10);
+
+\end{tikzpicture}
+
+
+\pagebreak
+
+
+# Formatierungen
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```

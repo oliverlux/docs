@@ -1,7 +1,7 @@
 author: Oliver Lux | Version 1.0.0
 titlepage: true
 titlepage-rule-height: 0
-titlepage-background: ../../vorlagen/background.pdf
+titlepage-background: ../vorlagen/background.pdf
 date: today
 date-format: "YYYY"
 format:
@@ -10,4 +10,4 @@ format:
     number-sections: true
     toc-title: Inhaltsverzeichnis
     colorlinks: true
-    template: ../../vorlagen/gbs.latex
+    template: ../vorlagen/gbs.latex
