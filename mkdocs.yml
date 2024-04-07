@@ -12,7 +12,9 @@ theme:
   language: de
   palette: 
     # Palette toggle for light mode
-    - scheme: default
+    - primary: custom
+      accent: custom
+      scheme: default
       #accent: lime
       #primary: lime
       toggle:
@@ -20,7 +22,9 @@ theme:
         name: Switch to dark mode
 
     # Palette toggle for dark mode
-    - scheme: slate
+    - primary: custom
+      accent: custom
+      scheme: slate
       #accent: lime
       #primary: lime
       toggle:

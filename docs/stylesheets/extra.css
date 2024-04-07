@@ -2,7 +2,8 @@
 :root {
     --md-primary-fg-color:        #CCCC00;
     --md-accent-fg-color:			#8A9100;
-  }
+    --md-typeset-a-color:  #CCCC00;
+}
   
 							 
 /* Container für das einbinden von Youtube videos*/
@@ -21,9 +22,13 @@
     height: 100%;
 }
 
+
+
 .md-nav__source {
-    background-color: #CCCC00;;
+    background-color: #CCCC00;
 }
+
+
   
   .md-header__button.md-logo img{
     width: 100%;
