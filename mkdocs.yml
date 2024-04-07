@@ -2,8 +2,16 @@ site_name: Modulinhalte Informatik
 nav:
     - Home: index.md
     - Allgemeine Informationen: 
-      - Umgang mit KI-/LLM-Tools: umgang-ki.md
-      - Umgang mit VMs: umgang-vm.md
+      - Umgang mit KI-/LLM-Tools: allgemein/umgang-ki.md
+      - Umgang mit VMs: allgemein/umgang-vm.md
+    - Grundlagen:
+      - Markdown: grundlagen/markdown.md
+      - Git: grundlagen/git.md
+    - Webentwicklung:
+      - HTTP: webentwicklung/http.md
+    - DevOps:
+      - Allgemein: devops/allgemein.md
+
 
 theme:
   name: material
@@ -55,6 +63,6 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-copyright: Copyright &copy; 2023 <a href='https://www.gbssg.ch'><span style='font-weight:1000'>gbs</span>sg.ch</a> <span class='green'>|</span> Zusatzunterlagen Informatik <span class='green'>
+copyright: Copyright &copy; 2024 <a href='https://www.gbssg.ch'><span style='font-weight:1000'>gbs</span>sg.ch</a> <span class='green'>|</span> Zusatzunterlagen Informatik <span class='green'>
 repo_url: https://github.com/oliverlux/content
 
