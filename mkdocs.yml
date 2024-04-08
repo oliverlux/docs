@@ -64,5 +64,5 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 copyright: Copyright &copy; 2024 <a href='https://www.gbssg.ch'><span style='font-weight:1000'>gbs</span>sg.ch</a> <span class='green'>|</span> Zusatzunterlagen Informatik <span class='green'>
-repo_url: https://github.com/oliverlux/content
+repo_url: https://github.com/oliverlux/docs
 
