@@ -1,0 +1,198 @@
+---
+title: "Modul 346 &raquo; Cloud"
+subtitle: "bla"
+author: [Oliver Lux]
+lastUpdated: 2024-10-08
+date: "2025"
+version: "Version: 0.1.1"
+titlepage: true
+toc-own-page: true
+titlepage-rule-color: "ffffff"
+titlepage-background: "../../vorlagen/background.pdf"
+colorlinks: true
+header-includes: |
+ \usepackage{fontawesome5}
+
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+
+---
+
+# AWS CLI & AWS Lamda
+
+## Ziele
+
+- Sie erstellen lokal eine AWS Lambdafunktion und veröffentlichen diese via AWS CLI.
+- Sie lassen sich alle bereits existierenden Lambdafunktionen Ihres Accounts via AWS CLI anzeigen.
+- Sie führen eine Lambdafunktion via AWS CLI aus.
+- Sie finden gezielt nach Lambda Logmeldungen über AWS CloudWatch.
+- Sie löschen eine Lambdafunktion über AWS CLI.
+
+
+Mit Virtualisierung sind Sie sicherlich bereits während Ihrer bisherigen Lehre in Berührung gekommen. Versuchen Sie den nachfolgenden Arbeitsauftrag zuerst alleine zu bearbeiten. Wenn Sie fertig sind, können Sie sich mit Ihrem Banknachbarn austauschen:
+
+1. Was bedeutet Virtualisierung grundsätzlich?
+2. Wie funktioniert Virtualisierung grob?
+3. Wo und wann macht Virtualisierung Sinn? 
+
+::: {.callout-tip}
+## Tip with Title
+
+This is an example of a callout with a title.
+:::
+
+
+:::{.callout-note}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+:::{.callout-tip}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+:::{.callout-warning}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+:::{.callout-caution}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+:::{.callout-important}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+
+## Vorbereitung
+
+In dieser Übung wird das AWS CLI Tool benötigt. Das Tool kann entweder lokal installiert und konfiguriert werden oder 
+direkt über die `CloudShell` nutzen.
+
+## Aufgaben
+
+\colorbox{darkgray}{\color{white}Aufgabe 1: Lamdafunktion erstellen | {\faUser} Einzelarbeit | {\faClock} 15' }
+
+Als Grundlage einer Lambdafunktion wird ein Script verwendet. Dieses Script wird beim Aufruf von AWS Lambda ausgeführt. 
+Erstellen Sie eine `index.js` Datei mit nachfolgendem Inhalt:
+
+```javascript
+exports.handler = async function(event, context) {
+  console.log("EVENT\n" + JSON.stringify(event, null, 2))
+  return context.logStreamName
+}
+```
+
+Bevor Sie jetzt die neue Funktion erstellen. Lassen Sie sich alle vorhanden Lambdafunktionen ausgeben:
+
+```bash
+aws lambda list-functions
+```
+
+Für das Erstellen der Lambdafunktion wird ein `deployment package` verwendet. Dies ist ein `zip`-Archiv, das alle für die 
+Ausführung der Funktion notwendigen Abhängigkeiten enthält.
+
+```bash
+zip function.zip index.js
+```
+
+Die Datei `function.zip` enthält nun alles, was AWS Lambda benötigt. Dieses `deployment package` wird nun freigegeben. Ersetzen Sie zuvor 
+`<lab-function-name>` durch einen Namen Ihrer Wahl. Das Erstellen der Lambdafunktion funktioniert nur, wenn der gewählte Name nicht
+bereits von einer anderen Lambdafunktion verwendet wird. Zudem wird noch die Role-ARN benötigt:
+
+`AWS Management Console` -> `IAM` -> `Rollen` -> `LabRole` -> `ARN`
+
+Kopieren Sie die ARN. Sie ist im nachfolgenden Befehl für `<lab-role-arn>` einzusetzen.
+
+```bash
+aws lambda create-function --function-name <lab-function-name> --zip-file fileb://function.zip --handler index.handler --runtime nodejs16.x --role <lab-role-arn>
+```
+
+Die Lambdafunktion ist nun erstellt. Überprüfen Sie diese anhand der `AWS Management Console` oder des obigen Befehls.
+
+\begin{tikzpicture}
+\draw[step=0.5cm,gray,very thin] (-2,-1) grid (14,1);
+\end{tikzpicture}
+
+\colorbox{gray}{\color{white}Aufgabe 1.1: Advanced - Update einer Lambdafunktion | {\faUser} Einzelarbeit | {\faClock} 5' }
+
+Oben haben wir gesehen, dass eine Funktion im Prinzip nur genau ein Mal erstellt werden kann. Ein zweiter Aufruf von `aws lambda create-function ...` schlägt fehl weil
+der Name bereits existiert. Wie kann man diesem Problem begegnen? Suchen Sie hierfür eine Lösung. Stichwort hierzu lautet `update-function-code`.
+
+\begin{tikzpicture}
+\draw[step=0.5cm,gray,very thin] (-2,-1) grid (14,1);
+\end{tikzpicture}
+
+Das Anpassen der Funktion ist natürlich wichtig, um beispielsweise Bugs oder Optimierungen am Code zu veröffentlichen.
+
+\pagebreak
+
+\colorbox{darkgray}{\color{white}Aufgabe 2: Lamdafunktion ausführen | {\faUser} Einzelarbeit | {\faClock} 10' }
+
+Eine Lambdafunktion kann über `AWS CLI` ausgeführt werden:
+
+```bash
+aws lambda invoke --function-name <lab-function-name> response.txt
+```
+
+Die Datei `response.txt` enthält Daten, die von der Lambdafunktion zurückgegeben wurden. Analyiseren Sie den Funktionscode und den Inhalt
+der Datei `response.txt`. Was enthält die Datei?
+
+\begin{tikzpicture}
+\draw[step=0.5cm,gray,very thin] (-2,-1) grid (14,1);
+\end{tikzpicture}
+
+Die Lambdafunktion kann beliebig oft aufgerufen werden. Amazon verrechnet datei die Laufzeit der Funktion in ms.
+
+Logausgaben sind zu finden unter:
+
+`AWS Management Console` -> `CloudWatch` -> `Protokolle` -> `Protokollgruppen` -> `/aws/lambda/<lab-function-name>`
+
+\colorbox{gray}{\color{white}Aufgabe 2.1: Advanced - Übergabe von Daten | {\faUser} Einzelarbeit | {\faClock} 10' }
+
+Auch via `AWS CLI` ist es möglich, der Funktion gewisse Daten mitzugeben. Diese Daten landen dann im Objekt `event` (siehe Code der Lambdafunktion).
+
+```bash
+aws lambda invoke --function-name <lab-function-name> --cli-binary-format raw-in-base64-out --payload '{"name": "John Smith"}' response.txt
+```
+
+Versuchen Sie herauszufinden, was mit den Daten `{"name": "John Smith"}` genau passiert. Tipp: Die Daten werden in der Lambdafunktion geloggt.
+
+\begin{tikzpicture}
+\draw[step=0.5cm,gray,very thin] (-2,-1) grid (14,1);
+\end{tikzpicture}
+
+Spielen Sie ein wenig dem Parameter `--payload` und schauen Sie sich jeweils das Resultat im Log an.
+
+\pagebreak
+
+\colorbox{darkgray}{\color{white}Aufgabe 3: Lamdafunktion löschen | {\faUser} Einzelarbeit | {\faClock} 5' }
+
+Nicht mehr benötigte Lambdafunktionen können entfernt werden:
+
+```bash
+aws lambda delete-function <lab-function-name>
+```
+
+Überprüfen Sie die Aktion, indem Sie alle vorhanden Lambdafunktionen anzeigen.
+
+\begin{tikzpicture}
+\draw[step=0.5cm,gray,very thin] (-2,-1) grid (14,1);
+\end{tikzpicture}
+ 
