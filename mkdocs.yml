@@ -11,6 +11,7 @@ nav:
       - HTTP: webentwicklung/http.md
     - DevOps:
       - Allgemein: devops/allgemein.md
+      - Docker/Cloud: devops/docker-cloud.md
 
 
 theme:
