@@ -2,6 +2,44 @@
 
 Als KI-/LLM-Tools werden alle Programme und Dienste bezeichnet, die künstliche Intelligenz oder Large Language Models zur Textgenerierung verwenden, unabhängig davon, ob sie Teile eines Textverarbeitungsprogramms sind oder nicht. Beispiele sind ChatGPT, neuroflash, Bing o.ä. 
 
+## KI-Grundregeln am GBS
+
+Am GBS versuchen wir generative KI im Kontext des Lernens und der Bildung proaktiv zu integrieren - ohne ein striktes Verbot. Wie geht ein **verantwortungsvoller Umgang** mit KI-Hilfsmitteln?
+
+!!! quote "**1. Respektiere die Privatsphäre**"
+
+    Gebe niemals persönliche Informationen wie Daten, Fotos oder Stimmen von dir oder anderen an ein KI-Tool weiter.
+
+!!! quote "**2. Urheberrecht**"
+
+    Gebe niemals kreative Arbeiten anderer, sowohl Bilder als auch Texte, in ein KI-Tool ein. Das Urheberrecht muss berücksichtigt werden. Wenn du nicht sicher bist, sehe von einer Verwendung ab.
+
+!!! quote "**3. Lernfortschritt**"
+
+    Stelle deine eigene Entwicklung, Kreativität und dein Lernen immer an erster Stelle. Bitte die KI, dir etwas zu erklären oder mitzudenken, anstatt nur Antworten zu geben.
+
+!!! quote "**4. Sprache**"
+
+    Verwende in deinen Prompts keine hasserfüllten, sexuellen und/oder diskriminierenden Wörter.
+
+!!! quote "**5. Hinterfrage die Ergebnisse der KI**"
+
+    Überprüfe immer die Ergebnisse der KI! KI-Tools können Fehler machen, voreingenommen sein und halluzinieren. 
+
+!!! quote "**6. KI-Einsatz deklarieren**"
+
+    Sei ehrlich, was die Nutzung von KI angeht. Zeige, wann und wie du KI verwendet hast.
+
+!!! quote "**7. KI-Einsatz im Unterricht und bei Prüfungen**"
+
+    Verwende KI im Unterricht und bei Prüfungen nur, wenn die Lehrperson die Erlaubnis dazu erteilt hat. Frage im Zweifelsfall nach.
+
+!!! quote "**8. Betrug**"
+
+    Du trägst die Verantwortung über deine eingereichten Arbeiten. Falls KI unredlich verwendet wird, kann dies als Betrug gewertet werden.
+
+
+
 ## Im Untericht
 
 1. Alle Medien und Werkzeuge sind erlaubt. Sie dürfen sämtliche Medien (Texte, Videos,...) und Werkzeuge (Apps, Taschenrechner,...) im Unterricht verwenden, die Sie für sinnvoll halten. Dies gilt auch für KI-Werkzeuge wie ChatGPT, die zum Beispiel beim Generieren von Ideen und beim Verfassen von Texten sehr hilfreich sein können. Diese Hilfsmittel stehen Ihnen also im Unterricht genauso zur Verfügung wie  im Alltag und im Beruf. Die Nutzung von Hilfsmitteln wird übrigens auch Gegenstand in unserem Unterricht sein. Lassen Sie uns gemeinsam herausfinden, wie man Werkzeuge sinnvoll für die Lösung von Aufgaben einsetzen kann.
